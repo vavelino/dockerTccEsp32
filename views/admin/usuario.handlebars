@@ -1,0 +1,18 @@
+
+<div class="jumbotron conteudo" >
+<h1>Lista de Usuários Cadastrados:</h1>
+<hr>
+{{#each posts}}
+
+<h1>{{id}} {{nome}}</h1> 
+<h4>{{numero}}</h4>
+<h6>{{dt}}</h6> 
+<a href="/admin/usuario/edit/{{id}}"><button class="btn btn-primary mt-2">Editar</button></a>
+<a href="/admin/usuario/deletar/{{id}}"><button class="btn btn-danger mt-2">Deletar</button></a>
+<hr>
+{{/each}}
+
+
+
+<a href="/admin/usuario/add"><button class="btn btn-success">Cadastrar Novo usuário</button></a>
+</div>

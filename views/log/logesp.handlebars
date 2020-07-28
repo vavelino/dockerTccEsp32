@@ -1,0 +1,60 @@
+<meta http-equiv='refresh' content='10'>
+
+<div class="jumbotron overTabela conteudo">
+
+    <h1>Tabela de Registro de Acesso de Usuários:</h1>    
+    <hr>
+    <div class="btn-group dropright">
+        <button class="btn btn-success dropdown-toggle mt-2" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Organizar por...
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/esp/log/0/0">Nome</a>
+            <a class="dropdown-item" href="/esp/log/1/0">Acesso</a>
+            <a class="dropdown-item" href="/esp/log/2/0">Hora servidor</a>
+            <a class="dropdown-item" href="/esp/log/3/0">Hora ESP</a>
+            <a class="dropdown-item" href="/esp/log/4/0">N° Banco</a>
+        </div>
+    </div>
+    <!--Log Antigo-->
+    <a href="/esp/log/4/1"><button type="button" class="btn btn-primary mt-2">Modo Blocos</button> </a>
+    <a href="/esp/log/delete"><button class="btn btn-danger mt-2">Deletar todos os logs</button></a>
+    
+    <table class="table table-bordered table-striped mt-4 ">
+        <tr>
+            <th class="text-center ">
+                Nome<br>
+            </th>
+            <th class="text-center">
+                Acesso<br>
+            </th>
+            <th class="text-center">
+                ESP (Hora|Data)<br>
+
+            </th>
+            <th class="text-center">
+                Nº Banco<br>
+            </th>
+            <th class="text-center">
+                TagRFID<br>
+            </th>
+            <th class="text-center">
+                Servidor (Hora|Data) <br>
+            </th>
+        </tr>
+        </thead>        
+        <tbody>            
+            {{#each posts}}            
+            <tr>
+                <th class="text-center" scope="row">{{nome}}</th>
+                <td class="text-center">{{aute}}</td>
+                <td class="text-center">{{tempo}}</td>
+                <td class="text-center">{{id}}</td>
+                <td class="text-center">{{numero}}</td>
+                <td class="text-center">{{dt}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

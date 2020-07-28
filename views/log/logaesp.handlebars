@@ -1,0 +1,34 @@
+<meta http-equiv='refresh' content='10'>
+<div class="jumbotron conteudo">
+  <h1>Registro de Acesso de Usuários:</h1>    
+    <hr>
+  <div class="btn-group dropright">
+    <button class="btn btn-success dropdown-toggle mt-2" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Organizar por...
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="/esp/log/0/1">Nome</a>
+      <a class="dropdown-item" href="/esp/log/1/1">Acesso</a>
+      <a class="dropdown-item" href="/esp/log/2/1">Hora servidor</a>
+      <a class="dropdown-item" href="/esp/log/3/1">Hora ESP</a>
+      <a class="dropdown-item" href="/esp/log/4/1">N° Banco</a>
+    </div>
+  </div>
+  <a href="/esp/log/4/0"><button type="button" class="btn btn-primary mt-2">Modo Tabela</button> </a>
+  <a href="/esp/log/delete"><button class="btn btn-danger mt-2">Deletar todos os logs</button></a>
+  
+  <ul class="list-group mt-4">
+    {{#each posts}}
+    <li class="list-group-item blocos">
+      <h1>{{id}} -) {{nome}}</h1>
+      <h4>Acesso: {{aute}}</h4>
+      <h4>Hora Registrada pelo Esp={{tempo}}</h4>
+      <h6> ID ={{numero}} </h6>
+      <h6> Hora de chagada no servidor={{dt}}</h6>
+    </li>
+    {{/each}}
+  </ul>
+  
+
+</div>

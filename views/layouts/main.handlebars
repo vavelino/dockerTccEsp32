@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Acesso</title>
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(83, 101, 118), rgb(41, 46, 73));
+        }
+
+        .conteudo {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: solid 2px #222;
+        }
+
+        .tabela {
+            border: solid 1px #222;
+        }
+
+        .blocos {
+
+            background: rgb(233, 236, 239);
+            border: thin 1px #222;
+
+        }
+        .overTabela{
+            overflow:scroll;
+        }
+    </style>
+</head>
+
+<body>
+    {{>_navbar}}
+    <div class="container mt-4">
+        {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+        {{else}}
+        {{/if}}
+        {{>_msg}}
+        {{{body}}}
+    </div>
+    {{>_footer}}
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+<script src="/js/bootstrap.js"></script>
+
+</html>
