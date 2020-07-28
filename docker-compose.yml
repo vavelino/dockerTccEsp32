@@ -8,10 +8,10 @@ services:
 #        - docker_xxx
 #    cap_add:
 #      - SYS_NICE  # CAP_SYS_NICE
-#    networks:
-#      - backend
- #   ports:          
-   #   - "3306:3306"
+    networks:
+      - backend
+    ports:          
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=password           
       - MYSQL_DATABASE=controle
@@ -28,14 +28,14 @@ services:
       - "8080:8080"           
     depends_on:
         - mysqldb
-#    networks:
-#      - backend
+    networks:
+      - backend
 #    networks:
 #        - docker_xxx 
    
     volumes:
       - .:/usr/app
-#networks:  
-#  backend: 
-#    driver: bridge      
-   # driver: host      
+networks:  
+  backend: 
+  #  driver: bridge      
+    driver: host      
